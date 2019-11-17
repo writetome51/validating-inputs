@@ -1,8 +1,4 @@
 import { ValidatingInput } from './validating-input';
-import { modifyObject } from '@writetome51/modify-object';
-
-
-// framework independent
 
 
 export function getDefaultTextInput(): ValidatingInput {
@@ -22,7 +18,7 @@ export function getDefaultNumberInput(): ValidatingInput {
 
 export function getDefaultTypeInput(type: string): ValidatingInput {
 	let input = getDefaultInput();
-	modifyObject(input, {type});
+	input.type = type;
 	return input;
 }
 
