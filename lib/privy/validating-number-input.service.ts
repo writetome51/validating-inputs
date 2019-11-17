@@ -1,6 +1,6 @@
 import { ValidatingInput } from './validating-input';
 import { ValidatingInputService } from './validating-input.service';
-import { getDefaultNumberInput } from './privy/get-input.functions';
+import { getDefaultNumberInput } from './get-input.functions';
 
 
 // Framework independent
