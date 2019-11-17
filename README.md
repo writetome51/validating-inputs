@@ -1,0 +1,3 @@
+# ValidatingInputs
+
+A TypeScript interface
