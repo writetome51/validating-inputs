@@ -1,7 +1,7 @@
 {
   "name": "@writetome51/validating-inputs",
-  "version": "1.0.0",
-  "description": "A package of TypeScript interfaces, abstract classes, and a couple of concrete classes to help you create form inputs that validate themselves",
+  "version": "0.0.1",
+  "description": "A package of TypeScript/JavaScript classes to help you create form inputs that validate themselves",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

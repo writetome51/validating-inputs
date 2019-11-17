@@ -1,4 +1,4 @@
-import { ValidatingInput } from './validating-input';
+import { ValidatingInput } from '../validating-input';
 
 
 export function getDefaultTextInput(): ValidatingInput {
