@@ -12,7 +12,12 @@
     "url": "git+https://github.com/writetome51/validating-inputs.git"
   },
   "keywords": [
-   
+    "form",
+    "input",
+    "validation",
+    "interface",
+    "class",
+    "classes"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
@@ -21,5 +26,9 @@
   },
   "homepage": "https://github.com/writetome51/validating-inputs#readme",
   "dependencies": {
+    "@writetome51/is-array-not-array": "^1.0.0",
+    "@writetome51/is-empty-not-empty": "^1.0.0",
+    "@writetome51/not": "^1.0.5",
+    "@writetome51/public-array-container": "^3.0.0"
   }
 }

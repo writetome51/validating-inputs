@@ -12,12 +12,12 @@ Abstract class representing a `ValidatingInput` array.
 
 # ValidatingNumberInputService
 
-Implements `ValidatingInputService`
+Abstract class, implements `ValidatingInputService`
 
 # ValidatingPasswordInputService
 
-Implements `ValidatingInputService`
+Abstract class, implements `ValidatingInputService`
 
 # ValidatingTextInputService
 
-Implements `ValidatingInputService`
+Abstract class, implements `ValidatingInputService`
