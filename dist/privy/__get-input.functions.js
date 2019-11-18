@@ -1,24 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function getDefaultTextInput() {
-    return getDefaultTypeInput('text');
+function __getDefaultTextInput() {
+    return __getDefaultTypeInput('text');
 }
-exports.getDefaultTextInput = getDefaultTextInput;
-function getDefaultPasswordInput() {
-    return getDefaultTypeInput('password');
+exports.__getDefaultTextInput = __getDefaultTextInput;
+function __getDefaultPasswordInput() {
+    return __getDefaultTypeInput('password');
 }
-exports.getDefaultPasswordInput = getDefaultPasswordInput;
-function getDefaultNumberInput() {
-    return getDefaultTypeInput('number');
+exports.__getDefaultPasswordInput = __getDefaultPasswordInput;
+function __getDefaultNumberInput() {
+    return __getDefaultTypeInput('number');
 }
-exports.getDefaultNumberInput = getDefaultNumberInput;
-function getDefaultTypeInput(type) {
-    var input = getDefaultInput();
+exports.__getDefaultNumberInput = __getDefaultNumberInput;
+function __getDefaultTypeInput(type) {
+    var input = __getDefaultInput();
     input.type = type;
     return input;
 }
-exports.getDefaultTypeInput = getDefaultTypeInput;
-function getDefaultInput() {
+exports.__getDefaultTypeInput = __getDefaultTypeInput;
+function __getDefaultInput() {
     return {
         type: undefined,
         id: undefined,
@@ -40,4 +40,4 @@ function getDefaultInput() {
         min: undefined
     };
 }
-exports.getDefaultInput = getDefaultInput;
+exports.__getDefaultInput = __getDefaultInput;

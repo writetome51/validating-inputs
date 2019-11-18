@@ -1,29 +1,29 @@
 import { ValidatingInput } from './validating-input';
 
 
-export function getDefaultTextInput(): ValidatingInput {
-	return getDefaultTypeInput('text');
+export function __getDefaultTextInput(): ValidatingInput {
+	return __getDefaultTypeInput('text');
 }
 
 
-export function getDefaultPasswordInput(): ValidatingInput {
-	return getDefaultTypeInput('password');
+export function __getDefaultPasswordInput(): ValidatingInput {
+	return __getDefaultTypeInput('password');
 }
 
 
-export function getDefaultNumberInput(): ValidatingInput {
-	return getDefaultTypeInput('number');
+export function __getDefaultNumberInput(): ValidatingInput {
+	return __getDefaultTypeInput('number');
 }
 
 
-export function getDefaultTypeInput(type: string): ValidatingInput {
-	let input = getDefaultInput();
+export function __getDefaultTypeInput(type: string): ValidatingInput {
+	let input = __getDefaultInput();
 	input.type = type;
 	return input;
 }
 
 
-export function getDefaultInput(): ValidatingInput {
+export function __getDefaultInput(): ValidatingInput {
 	return {
 		type: undefined,
 		id: undefined,

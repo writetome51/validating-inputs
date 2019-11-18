@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var get_input_functions_1 = require("./get-input.functions");
+var __get_input_functions_1 = require("./__get-input.functions");
 // Framework independent
 var ValidatingPasswordInputService = /** @class */ (function () {
     function ValidatingPasswordInputService() {
-        this.data = get_input_functions_1.getDefaultPasswordInput();
+        this.data = __get_input_functions_1.__getDefaultPasswordInput();
     }
     return ValidatingPasswordInputService;
 }());
