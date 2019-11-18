@@ -1,5 +1,5 @@
 // Represents a <form> input that validates itself.
-// Framework independent.
+
 
 export interface ValidatingInput {
 

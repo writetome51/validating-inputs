@@ -16,7 +16,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var input_validator_service_1 = require("./input-validator.service");
 var is_empty_not_empty_1 = require("@writetome51/is-empty-not-empty");
 var public_array_container_1 = require("@writetome51/public-array-container");
-// Framework independent
 var ValidatingInputsService = /** @class */ (function (_super) {
     __extends(ValidatingInputsService, _super);
     function ValidatingInputsService(

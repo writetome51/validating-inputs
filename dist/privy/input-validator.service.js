@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var not_1 = require("@writetome51/not");
 var is_array_not_array_1 = require("@writetome51/is-array-not-array");
-// Framework independent
 var InputValidatorService = /** @class */ (function () {
     function InputValidatorService() {
     }

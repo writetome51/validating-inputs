@@ -2,7 +2,6 @@ import { ValidatingInput } from './validating-input';
 import { not } from '@writetome51/not';
 import { isArray, notArray } from '@writetome51/is-array-not-array';
 
-// Framework independent
 
 export class InputValidatorService {
 

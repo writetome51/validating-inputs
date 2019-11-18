@@ -5,8 +5,6 @@ import { ValidatingInput } from './validating-input';
 import { ValidatingInputService } from './validating-input.service';
 
 
-// Framework independent
-
 export abstract class ValidatingInputsService extends PublicArrayContainer {
 
 
