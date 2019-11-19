@@ -18,9 +18,19 @@ var is_empty_not_empty_1 = require("@writetome51/is-empty-not-empty");
 var public_array_container_1 = require("@writetome51/public-array-container");
 var ValidatingInputsService = /** @class */ (function (_super) {
     __extends(ValidatingInputsService, _super);
-    function ValidatingInputsService(
-    // `inputs` must be in the order you want them to appear in the form
-    inputs) {
+    function ValidatingInputsService() {
+        // `inputs` must be in the order you want them to appear in the form
+        var inputs = [];
+        for (
+        // `inputs` must be in the order you want them to appear in the form
+        var _i = 0; 
+        // `inputs` must be in the order you want them to appear in the form
+        _i < arguments.length; 
+        // `inputs` must be in the order you want them to appear in the form
+        _i++) {
+            // `inputs` must be in the order you want them to appear in the form
+            inputs[_i] = arguments[_i];
+        }
         var _this = _super.call(this) || this;
         _this.error = '';
         _this.data = inputs.map(function (input) { return input.data; });

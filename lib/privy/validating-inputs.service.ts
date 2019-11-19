@@ -15,7 +15,7 @@ export abstract class ValidatingInputsService extends PublicArrayContainer {
 	constructor(
 		// `inputs` must be in the order you want them to appear in the form
 
-		inputs: ValidatingInputService[]
+		...inputs: ValidatingInputService[]
 	) {
 		super();
 
