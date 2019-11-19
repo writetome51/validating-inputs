@@ -9,7 +9,7 @@ export declare abstract class ValidatingInputsService extends PublicArrayContain
 	error: string;
 
 
-	constructor(inputs: ValidatingInputService[]);
+	constructor(...inputs: ValidatingInputService[]);
 
 
 	areValid(): boolean;
