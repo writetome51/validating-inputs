@@ -13,18 +13,17 @@ export class InputValidatorService {
 
 
 		function handleArray(isValidFunctions) {
+			if (notArray(input.errorMessage)) throw new Error(
+				`The 'isValid' property is an array, which means the 'errorMessage' property 
+					must also be an array`
+			);
 			// @ts-ignore
 			for (let i = 0; i < isValidFunctions.length; ++i) {
 				let isValid = isValidFunctions[i];
 
 				if (not(isValid())) {
-					if (notArray(input.errorMessage)) throw new Error(
-						`The 'isValid' property is an array, which means the 'errorMessage' property 
-						must also be an array`);
-					else {
-						input.__error = input.errorMessage[i];
-						return;
-					}
+					input.__error = input.errorMessage[i];
+					return;
 				}
 				else input.__error = ''; // no error.
 			}

@@ -11,16 +11,14 @@ var InputValidatorService = /** @class */ (function () {
         else
             handleFunction(input.isValid);
         function handleArray(isValidFunctions) {
+            if (is_array_not_array_1.notArray(input.errorMessage))
+                throw new Error("The 'isValid' property is an array, which means the 'errorMessage' property \n\t\t\t\t\tmust also be an array");
             // @ts-ignore
             for (var i = 0; i < isValidFunctions.length; ++i) {
                 var isValid = isValidFunctions[i];
                 if (not_1.not(isValid())) {
-                    if (is_array_not_array_1.notArray(input.errorMessage))
-                        throw new Error("The 'isValid' property is an array, which means the 'errorMessage' property \n\t\t\t\t\t\tmust also be an array");
-                    else {
-                        input.__error = input.errorMessage[i];
-                        return;
-                    }
+                    input.__error = input.errorMessage[i];
+                    return;
                 }
                 else
                     input.__error = ''; // no error.
