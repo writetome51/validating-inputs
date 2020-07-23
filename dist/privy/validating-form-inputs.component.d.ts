@@ -6,7 +6,9 @@ export declare abstract class ValidatingFormInputsComponent {
 
 	private __validatingInputs;
 
+
 	constructor(__validatingInputs: ValidatingInputsService);
+
 
 	get inputs(): ValidatingInput[];
 

@@ -4,6 +4,9 @@ import { __getDefaultTypeInput } from './__get-input.functions';
 
 export abstract class ValidatingTextInputService extends ValidatingInputService {
 
-	data = __getDefaultTypeInput('text');
+	constructor() {
+		super();
+		this.data = __getDefaultTypeInput('text');
+	}
 
 }
