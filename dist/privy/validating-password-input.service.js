@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var __get_input_functions_1 = require("./__get-input.functions");
-var ValidatingPasswordInputService = /** @class */ (function () {
-    function ValidatingPasswordInputService() {
-        this.data = __get_input_functions_1.__getDefaultPasswordInput();
+const validating_input_service_1 = require("./validating-input.service");
+const __get_input_functions_1 = require("./__get-input.functions");
+class ValidatingPasswordInputService extends validating_input_service_1.ValidatingInputService {
+    constructor() {
+        super(...arguments);
+        this.data = __get_input_functions_1.__getDefaultTypeInput('password');
     }
-    return ValidatingPasswordInputService;
-}());
+}
 exports.ValidatingPasswordInputService = ValidatingPasswordInputService;

@@ -1,10 +1,9 @@
-import { ValidatingInput } from './validating-input';
 import { ValidatingInputService } from './validating-input.service';
-import { __getDefaultPasswordInput } from './__get-input.functions';
+import { __getDefaultTypeInput } from './__get-input.functions';
 
 
-export abstract class ValidatingPasswordInputService implements ValidatingInputService {
+export abstract class ValidatingPasswordInputService extends ValidatingInputService {
 
-	data: ValidatingInput = __getDefaultPasswordInput();
+	data = __getDefaultTypeInput('password');
 
 }

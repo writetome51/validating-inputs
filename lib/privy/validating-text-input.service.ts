@@ -1,10 +1,9 @@
-import { ValidatingInput } from './validating-input';
 import { ValidatingInputService } from './validating-input.service';
-import { __getDefaultTextInput } from './__get-input.functions';
+import { __getDefaultTypeInput } from './__get-input.functions';
 
 
-export abstract class ValidatingTextInputService implements ValidatingInputService {
+export abstract class ValidatingTextInputService extends ValidatingInputService {
 
-	data: ValidatingInput = __getDefaultTextInput();
+	data = __getDefaultTypeInput('text');
 
 }

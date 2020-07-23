@@ -1,19 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function __getDefaultTextInput() {
-    return __getDefaultTypeInput('text');
-}
-exports.__getDefaultTextInput = __getDefaultTextInput;
-function __getDefaultPasswordInput() {
-    return __getDefaultTypeInput('password');
-}
-exports.__getDefaultPasswordInput = __getDefaultPasswordInput;
-function __getDefaultNumberInput() {
-    return __getDefaultTypeInput('number');
-}
-exports.__getDefaultNumberInput = __getDefaultNumberInput;
 function __getDefaultTypeInput(type) {
-    var input = __getDefaultInput();
+    let input = __getDefaultInput();
     input.type = type;
     return input;
 }

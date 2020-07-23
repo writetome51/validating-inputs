@@ -6,10 +6,8 @@ export declare abstract class ValidatingFormInputComponent {
 
 	private __validatingInput;
 
-
 	constructor(__validatingInput: ValidatingInputService);
 
-
-	readonly input: ValidatingInput;
+	get input(): ValidatingInput;
 
 }

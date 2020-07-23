@@ -4,15 +4,14 @@
 export interface ValidatingInput {
 
 	type: string;
-		// Can be 'text', 'password', 'number', etc.  Any <input> type is allowed, but so far this is
-		// only intended for 'text', 'password', or 'number'.
+		// Can be 'text', 'password', or 'number'.  Any <input> type is allowed, but so far this is
+		// only intended for those three.
 
 	id: string;
 		// assigned to <input> id. Same value is used for 'name' attribute and the input's associated
 		// <label> 'for' attribute.
 
 	isValid: (() => boolean) | (() => boolean)[];
-		// Called on input event 'blur'.
 		// Can be function or array of functions.  If array of functions:
 		//   - this.errorMessage must be array of error messages, each one belonging with
 		//     function of same index.
@@ -24,22 +23,22 @@ export interface ValidatingInput {
 	__error: string;
 		// Private.  Empty string.  If input is invalid, this is assigned this.errorMessage
 
-	objectToBind: any;
+	objectToBind: object;
 		// this.objectToBind[this.propertyToBind] is the variable storing the value of this input.
 
 	propertyToBind: string; // property in this.objectToBind
 
-	required: boolean;
-
 	label: string; // same value is used for 'placeholder' attribute
 
-	hideLabel: boolean; // Adds 'hidden' attribute to input's associated <label>
+	hideLabel?: boolean; // Adds 'hidden' attribute to input's associated <label>, default true
 
-	hidePlaceholder: boolean;
+	hidePlaceholder?: boolean; // default false
+
+	required?: boolean; // default true
 
 	prompt?: string; // text explaining input or asking user to fill it in
 
-	objectToMatch?: any;
+	objectToMatch?: object;
 		// this.objectToMatch[this.propertyToMatch] is the variable storing the value of another
 		// input -- an input whose value is supposed to match with this one.
 		// Example: if one <input> is for 'password' and another <input> is for 'confirm-password',
