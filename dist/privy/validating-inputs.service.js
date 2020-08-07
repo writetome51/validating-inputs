@@ -1,9 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const input_validator_service_1 = require("./input-validator.service");
-const is_empty_not_empty_1 = require("@writetome51/is-empty-not-empty");
-const public_array_container_1 = require("@writetome51/public-array-container");
-class ValidatingInputsService extends public_array_container_1.PublicArrayContainer {
+import { InputValidatorService } from './input-validator.service.js';
+import { notEmpty } from '@writetome51/is-empty-not-empty';
+import { PublicArrayContainer } from '@writetome51/public-array-container';
+export class ValidatingInputsService extends PublicArrayContainer {
     constructor(
     // `inputs` must be in the order you want them to appear in the form
     ...inputs) {
@@ -14,8 +12,8 @@ class ValidatingInputsService extends public_array_container_1.PublicArrayContai
     areValid() {
         this.error = '';
         for (let i = 0; i < this.data.length; ++i) {
-            input_validator_service_1.InputValidatorService.validate(this.data[i]);
-            if (is_empty_not_empty_1.notEmpty(this.data[i].__error)) {
+            InputValidatorService.validate(this.data[i]);
+            if (notEmpty(this.data[i].__error)) {
                 this.error = this.data[i].__error;
                 return false;
             }
@@ -23,4 +21,3 @@ class ValidatingInputsService extends public_array_container_1.PublicArrayContai
         return true;
     }
 }
-exports.ValidatingInputsService = ValidatingInputsService;

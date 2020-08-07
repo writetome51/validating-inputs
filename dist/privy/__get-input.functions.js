@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function __getDefaultTypeInput(type) {
+export function __getDefaultTypeInput(type) {
     let input = __getDefaultInput();
     input.type = type;
     return input;
 }
-exports.__getDefaultTypeInput = __getDefaultTypeInput;
-function __getDefaultInput() {
+export function __getDefaultInput() {
     return {
         type: undefined,
         id: undefined,
@@ -28,4 +25,3 @@ function __getDefaultInput() {
         min: undefined
     };
 }
-exports.__getDefaultInput = __getDefaultInput;

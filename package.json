@@ -1,7 +1,8 @@
 {
   "name": "@writetome51/validating-inputs",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "A package of TypeScript/JavaScript classes to help you create form inputs that validate themselves",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -26,9 +27,9 @@
   },
   "homepage": "https://github.com/writetome51/validating-inputs#readme",
   "dependencies": {
-    "@writetome51/is-array-not-array": "^1.0.0",
-    "@writetome51/is-empty-not-empty": "^1.0.0",
-    "@writetome51/not": "^1.0.5",
-    "@writetome51/public-array-container": "^3.0.0"
+    "@writetome51/is-array-not-array": "^2.0.0",
+    "@writetome51/is-empty-not-empty": "^2.0.0",
+    "@writetome51/not": "^2.0.0",
+    "@writetome51/public-array-container": "^4.0.0"
   }
 }

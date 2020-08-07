@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const validating_input_service_1 = require("./validating-input.service");
-const __get_input_functions_1 = require("./__get-input.functions");
-class ValidatingTextInputService extends validating_input_service_1.ValidatingInputService {
+import { ValidatingInputService } from './validating-input.service.js';
+import { __getDefaultTypeInput } from './__get-input.functions.js';
+export class ValidatingTextInputService extends ValidatingInputService {
     constructor() {
         super();
-        this.data = __get_input_functions_1.__getDefaultTypeInput('text');
+        this.data = __getDefaultTypeInput('text');
     }
 }
-exports.ValidatingTextInputService = ValidatingTextInputService;

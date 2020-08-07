@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class ValidatingFormInputComponent {
+export class ValidatingFormInputComponent {
     constructor(__validatingInput) {
         this.__validatingInput = __validatingInput;
     }
@@ -8,4 +6,3 @@ class ValidatingFormInputComponent {
         return this.__validatingInput.data;
     }
 }
-exports.ValidatingFormInputComponent = ValidatingFormInputComponent;
