@@ -1,3 +1,4 @@
+export { CanBeValidated } from './privy/can-be-validated';
 export { InputValidatorService } from './privy/input-validator.service';
 export { ValidatingFormInputComponent } from './privy/validating-form-input.component';
 export { ValidatingFormInputsComponent } from './privy/validating-form-inputs.component';

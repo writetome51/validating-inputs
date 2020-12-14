@@ -3,7 +3,6 @@ import { ValidatingInputsService } from './validating-inputs.service';
 
 
 export declare abstract class ValidatingFormInputsComponent {
-
 	private __validatingInputs;
 
 
@@ -11,5 +10,4 @@ export declare abstract class ValidatingFormInputsComponent {
 
 
 	get inputs(): ValidatingInput[];
-
 }
