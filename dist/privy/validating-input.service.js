@@ -7,8 +7,8 @@ export class ValidatingInputService {
     isValid() {
         this.error = '';
         InputValidatorService.validate(this.data);
-        if (notEmpty(this.data.__error)) {
-            this.error = this.data.__error;
+        if (notEmpty(this.data.triggeredError)) {
+            this.error = this.data.triggeredError;
             return false;
         }
         return true;

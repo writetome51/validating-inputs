@@ -3,10 +3,10 @@ import { notEmpty } from '@writetome51/is-empty-not-empty';
 import { PublicArrayContainer } from '@writetome51/public-array-container';
 import { ValidatingInput } from './validating-input';
 import { ValidatingInputService } from './validating-input.service';
+import { CanBeValidated } from './can-be-validated';
 
 
-export abstract class ValidatingInputsService extends PublicArrayContainer {
-
+export abstract class ValidatingInputsService extends PublicArrayContainer implements CanBeValidated {
 
 	data: ValidatingInput[];
 	error = '';
@@ -23,19 +23,18 @@ export abstract class ValidatingInputsService extends PublicArrayContainer {
 	}
 
 
-	areValid(): boolean {
+	isValid(): boolean {
 		this.error = '';
 
-		for (let i = 0; i < this.data.length; ++i) {
+		for (let i = 0, length = this.data.length; i < length; ++i) {
 			InputValidatorService.validate(this.data[i]);
 
-			if (notEmpty(this.data[i].__error)) {
-				this.error = this.data[i].__error;
+			if (notEmpty(this.data[i].triggeredError)) {
+				this.error = this.data[i].triggeredError;
 				return false;
 			}
 		}
 		return true;
 	}
-
 
 }

@@ -1,16 +1,16 @@
 import { ValidatingInput } from './validating-input';
 
 
-export function __getDefaultTypeInput(type: string): ValidatingInput {
+export function __getDefaultTypeInput(type: 'text' | 'password' | 'number'): ValidatingInput {
 	let input = __getDefaultInput();
-	input.type = type;
+	input.__type = type;
 	return input;
 }
 
 
 export function __getDefaultInput(): ValidatingInput {
 	return {
-		type: undefined,
+		__type: undefined,
 		id: undefined,
 		label: undefined,
 		hidePlaceholder: false,
@@ -22,7 +22,7 @@ export function __getDefaultInput(): ValidatingInput {
 		propertyToMatch: undefined,
 		isValid: undefined,
 		errorMessage: undefined,
-		__error: '',
+		triggeredError: '',
 		prompt: undefined,
 		maxLength: undefined,
 		minLength: undefined,

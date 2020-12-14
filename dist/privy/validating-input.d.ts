@@ -4,7 +4,7 @@
 export interface ValidatingInput {
 
 	type: string;
-		// Can be 'text', 'password', or 'number'.  Any <input> type is allowed, but so far this is
+		// Can be 'text', 'password', or 'number'.  Any <input> __type is allowed, but so far this is
 		// only intended for those three.
 
 	id: string;
@@ -49,11 +49,11 @@ export interface ValidatingInput {
 
 	propertyToMatch?: string; // property in this.objectToMatch
 
-	max?: number; // max value allowed if this.type is 'number'
+	max?: number; // max value allowed if this.__type is 'number'
 
-	min?: number; // min value allowed if this.type is 'number'
+	min?: number; // min value allowed if this.__type is 'number'
 
-	maxLength?: number; // if this.type is 'text' or 'password'
+	maxLength?: number; // if this.__type is 'text' or 'password'
 
-	minLength?: number; // if this.type is 'text' or 'password'
+	minLength?: number; // if this.__type is 'text' or 'password'
 }
