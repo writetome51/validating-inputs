@@ -4,9 +4,11 @@ import {PublicArrayContainer} from '@writetome51/public-array-container';
 
 
 export class ValidatingInputsService extends PublicArrayContainer {
+
 	constructor(
 		// `inputs` must be in the order you want them to appear in the form
-		...inputs) {
+		...inputs
+	) {
 		super();
 		this.error = '';
 		this.data = inputs.map((input) => input.data);
@@ -15,8 +17,10 @@ export class ValidatingInputsService extends PublicArrayContainer {
 
 	isValid() {
 		this.error = '';
+
 		for (let i = 0, length = this.data.length; i < length; ++i) {
 			InputValidatorService.validate(this.data[i]);
+
 			if (notEmpty(this.data[i].triggeredError)) {
 				this.error = this.data[i].triggeredError;
 				return false;
@@ -24,4 +28,10 @@ export class ValidatingInputsService extends PublicArrayContainer {
 		}
 		return true;
 	}
+
+
+	getValue() {
+		return this.data.map((input) => input.objectToBind[input.propertyToBind]);
+	}
+
 }

@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/validating-inputs",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "TypeScript/JavaScript classes to help you create form inputs that validate themselves",
   "type": "module",
   "main": "dist/index.js",

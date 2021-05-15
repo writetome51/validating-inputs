@@ -3,6 +3,7 @@ import {notEmpty} from '@writetome51/is-empty-not-empty';
 
 
 export class ValidatingInputService {
+
 	constructor() {
 		this.error = '';
 	}
@@ -11,10 +12,16 @@ export class ValidatingInputService {
 	isValid() {
 		this.error = '';
 		InputValidatorService.validate(this.data);
+
 		if (notEmpty(this.data.triggeredError)) {
 			this.error = this.data.triggeredError;
 			return false;
 		}
 		return true;
+	}
+
+
+	getValue() {
+		return this.data.objectToBind[this.data.propertyToBind];
 	}
 }

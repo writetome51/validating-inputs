@@ -37,4 +37,9 @@ export abstract class ValidatingInputsService extends PublicArrayContainer imple
 		return true;
 	}
 
+
+	getValue(): any[] {
+		return this.data.map((input: ValidatingInput) => input.objectToBind[input.propertyToBind]);
+	}
+
 }

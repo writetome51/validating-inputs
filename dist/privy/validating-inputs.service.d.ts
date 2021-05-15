@@ -15,4 +15,7 @@ export declare abstract class ValidatingInputsService extends PublicArrayContain
 
 
 	isValid(): boolean;
+
+
+	getValue(): any[];
 }

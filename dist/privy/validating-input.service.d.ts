@@ -9,4 +9,7 @@ export declare abstract class ValidatingInputService implements CanBeValidated {
 
 
 	isValid(): boolean;
+
+
+	getValue(): any;
 }

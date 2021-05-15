@@ -22,4 +22,9 @@ export abstract class ValidatingInputService implements CanBeValidated {
 		return true;
 	}
 
+
+	getValue(): any {
+		return this.data.objectToBind[this.data.propertyToBind];
+	}
+
 }
